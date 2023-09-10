@@ -27,7 +27,5 @@ Download the corresponding .repo file from Fedora COPR and copy it to /etc/yum.r
 
 Run the following command:
 
-
 yum install bazel4
 
-Contributed by -Movazed 
