@@ -1,2 +1,31 @@
 6.1.0
 # NOTE: Update Bazel version in tensorflow/tools/ci_build/release/common.sh.oss
+Installing Bazel on Fedora and CentOS
+
+bookmark_border
+This page describes how to install Bazel on Fedora and CentOS.
+
+The Bazel team does not provide official packages for Fedora and CentOS. Vincent Batts (@vbatts) generously maintains unofficial packages on Fedora COPR.
+
+The commands below must be run either via sudo or while logged in as root.
+
+Add --allowerasing when installing an upgrade from a previous major version of the Bazel package.
+
+The Bazelisk installer is an alternative to package installation.
+
+Installing on Fedora 25
+
+The DNF package manager can install Bazel from the COPR repository. Install the copr plugin for DNF if you have not already done so.
+dnf install dnf-plugins-core
+
+Run the following commands to add the Bazel repository and install the package:
+
+dnf copr enable vbatts/bazel
+dnf install bazel4
+Installing on CentOS 7
+Download the corresponding .repo file from Fedora COPR and copy it to /etc/yum.repos.d/.
+
+Run the following command:
+
+
+yum install bazel4
